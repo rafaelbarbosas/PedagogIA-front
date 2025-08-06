@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Gerador de Exercícios Pedagógicos</h1>
+
+  <mat-form-field appearance="outline" class="prompt-box">
+    <mat-label>Descreva o exercício desejado</mat-label>
+    <textarea matInput rows="4" [(ngModel)]="promptUsuario" placeholder="Ex: Atividade sobre cores para Jardim 1"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="gerar()" [disabled]="carregando || !promptUsuario">
+    {{ carregando ? 'Gerando...' : 'Gerar Exercício' }}
+  </button>
+
+  <mat-card *ngIf="respostaIA" class="resposta-card">
+    <mat-card-title>Exercício Sugerido:</mat-card-title>
+    <mat-card-content>
+      <div [innerHTML]="textoFormatado" class="markdown-content"></div>
+    </mat-card-content>
+  </mat-card>
+</div>
