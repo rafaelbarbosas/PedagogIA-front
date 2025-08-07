@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pedagogia": {
+    "pedagogia.ia": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/pedagogia",
+            "outputPath": "dist/pedagogia.ia",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pedagogia:build:production"
+              "buildTarget": "pedagogia.ia:build:production"
             },
             "development": {
-              "buildTarget": "pedagogia:build:development"
+              "buildTarget": "pedagogia.ia:build:development"
             }
           },
           "defaultConfiguration": "development"
