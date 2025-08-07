@@ -13,7 +13,7 @@ export class IaService {
     const body = { prompt: promptUsuario };
 
     const response = await firstValueFrom(
-      this.http.post<{ resposta: string }>(`${this.URL_API}/gerar`, body)
+      this.http.post<{ resposta: string }>(`https://${this.URL_API}/gerar`, body)
     );
 
     return response.resposta;
